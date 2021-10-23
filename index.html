@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+</head>
+<body>
+    <header>
+        <!-- add a new page with high scores! I did it! now i need to make the back button work  -->
+        <a href="./score/index.html">View Highscores</a>
+        <article class = 'timer'>timer</article>
+    </header>
+
+    <!-- intro to Quiz -->
+    <main class='activeIntro'>
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. 
+                Keep in mind that incorrect answers will penalize your scoretime
+                 by ten seconds!</p>
+            <button class = 'start'>Start Quiz</button>
+    </main>
+
+    <!-- Quiz questions  -->
+    <section class='hideQuestion'> 
+        <div class='questionText'>question</div>
+        <div class='answerList'>
+            <button class='button'>Answer A</button>
+            <button class='button'>Answer B</button>
+            <button class='button'>Answer C</button>
+            <button class='button'>Answer D</button>
+        </div>
+    </section>
+
+    <!-- results page  -->
+    <section class='hideResults'>
+        <h2>All done!</h2>
+        <div class='finalScore'></div>
+        <form>
+            <label>Enter Initals</label>
+            <input type="text">
+            <input type="submit">
+        </form>
+        <!-- add text box and submit button  -->
+        <div class='enterInitals'> </div>
+    </section>
+
+    <script src="script.js"></script> 
+</body>
+</html>

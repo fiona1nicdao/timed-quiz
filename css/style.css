@@ -1,0 +1,88 @@
+body {
+    margin: 10px;
+}
+
+.timer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.activeIntro {
+    /* display:none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    /* look up what transform: transslate mean */
+    transform: translate(-50%, -50%);
+}
+.hide{
+    display:none;
+}
+.hideQuestion {
+    display: none;
+}
+.activeQuestion {
+    /* display:none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    /* look up what transform: transslate mean */
+    transform: translate(-50%, -50%);
+}
+.answerList{
+    display:flex;
+    flex-direction: column;
+}
+.hideResults {
+    display: none;
+}
+.activeResults{
+    /* display:none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    /* look up what transform: transslate mean */
+    transform: translate(-50%, -50%);
+}
+
+h1, h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.finalScore {
+    padding-bottom: 10px;
+}
+
+.start {
+    font-weight: 500;
+    color: #0d0dad;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #d3e5f1;
+}
+
+.start:hover {
+    background-color: #47aad1;
+}

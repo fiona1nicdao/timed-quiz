@@ -28,14 +28,12 @@ footer {
 .activeQuestion,
 .activeResults,
 .activeIntro {
-    /* display:none; */
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
     top: 50%;
     left:  50%;
-    /* look up what transform: transslate mean */
     transform: translate(-50%, -50%);
 }
 .answerList{
@@ -60,7 +58,6 @@ p {
 
 
 .start,
-.btn3,
 .sumbitScore {
     font-weight: 500;
     color: #0d0dad;
@@ -70,7 +67,16 @@ p {
 }
 
 .start:hover,
-.btn:hover,
-.sumbitScore:hover {
+.sumbitScore:hover,
+.btn:hover  {
     background-color: #076185;
+}
+
+.btn3{
+    font-weight: 500;
+    color: #0d0dad;
+    border-radius: 5px;
+    background-color: #d3e5f1;
+    padding-left: 90px;
+    padding-right: 90px;
 }

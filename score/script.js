@@ -1,12 +1,12 @@
 
-var buttonEl = document.querySelectorAll('.btnGOback')
-buttonEl.ad
+var buttonEl = document.querySelector('.btnGOback')
 
-// btnGobackEl.addEventListener("click", goBack);
+// buttonEl.addEventListener("click", goBack);
 
+buttonEl.onclick = goBack;
 function goBack() {
     console.log("hi");
-    // window.location.href = "../Homework_04/index.html";
+    window.open.href = "../Homework_04/index.html";
 }
 
 

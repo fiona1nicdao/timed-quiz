@@ -10,11 +10,10 @@ var hideRes = document.querySelector('.hideResults')
 var finalScoreEl = document.querySelector('.finalScore')
 var questionEl = document.querySelector('.questionText')
 var answersEl = document.querySelector('.answerList')
-var btnA = document.getElementById("#btnA")
-// var btnB = document.getElementById("#btnB")
-// var btnC = document.getElementById("#btnC")
-// var btnD = document.getElementById("#btnD")
+// var btnA = document.getElementById("#btnA")
 var feedback = document.querySelector(".feedback")
+var initialsEl = document.querySelector('.initals')
+var submitScore = document.querySelector('.sumbitScore')
 
 // timer function
 startquizButton.addEventListener("click", setTime);
@@ -90,6 +89,23 @@ function chooseAnswer() {
     }
 }
 
+function storeScore() {
+    var initial = initialsEl.value.trim();
+
+    if (initial !== "") {
+        var highscores = 
+        JSON.parse(window.localStorage.getItem("scores")) || [];
+        var newScore = {
+            score: secondsLeft,
+            initials: initial 
+        };
+        highscores.push(newScore);
+        window.localStorage.setItem("scores", JSON.stringify(highscores));
+        window.location.href = "./score/index.html";
+    }
+    
+}
+submitScore.addEventListener("click", storeScore);
 
 // an array of questions with objects answers 
 var questions = [

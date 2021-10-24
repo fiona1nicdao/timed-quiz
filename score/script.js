@@ -1,3 +1,7 @@
+// variables 
+var clear = document.querySelector(".clear")
+
+// function to display scores 
 function displayScore(){
     console.log("haha")
     var highscores = 
@@ -13,14 +17,11 @@ function displayScore(){
         order.appendChild(liEl);
     })
 }
+displayScore();
 
-var clear = document.querySelector(".clear")
-var order = document.getElementById('order');
-
-// clear.onclick = clearScores;
+// function/ click to clear scores 
+clear.addEventListener('click', clearScores);
 function clearScores() {
     window.localStorage.removeItem('scores')
     window.location.reload();
 }
-clear.onclick = clearScores;
-displayScore();

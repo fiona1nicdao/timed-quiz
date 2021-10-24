@@ -55,7 +55,7 @@ function showQuestion() {
         btn3.setAttribute('class','btn3');
         btn3.setAttribute('value', choice);
         btn3.textContent = choice;
-        btn3.onclick = chooseAnswer;
+        btn3.addEventListener('click', chooseAnswer);
         answersEl.appendChild(btn3);
     });
 }

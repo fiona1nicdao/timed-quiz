@@ -101,16 +101,12 @@ function storeScore() {
         };
         highscores.push(newScore);
         window.localStorage.setItem("scores", JSON.stringify(highscores));
-        window.location.href = "./score/indexS.html";
+        // fix how to go to the next page
+        window.location.replace("./score/indexS.html") 
     }
-
 }
 
-// submitScore.onclick =storeScore
-submitScore.addEventListener("click", myFunction)
-function myFunction() {
-    window.location.href = "./score/indexS.html";
-}
+submitScore.onclick =storeScore;
 
 
 // an array of questions with objects answers 

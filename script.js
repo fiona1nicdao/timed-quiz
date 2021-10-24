@@ -101,11 +101,17 @@ function storeScore() {
         };
         highscores.push(newScore);
         window.localStorage.setItem("scores", JSON.stringify(highscores));
-        window.location.href = "./score/index.html";
+        window.location.href = "./score/indexS.html";
     }
-    
+
 }
-submitScore.addEventListener("click", storeScore);
+
+// submitScore.onclick =storeScore
+submitScore.addEventListener("click", myFunction)
+function myFunction() {
+    window.location.href = "./score/indexS.html";
+}
+
 
 // an array of questions with objects answers 
 var questions = [

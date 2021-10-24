@@ -1,5 +1,6 @@
 body {
     margin: 10px;
+    font-weight: 600;
 }
 
 .timer {
@@ -11,6 +12,10 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+footer {
+    padding: 10px;
+    font-weight: 300;
 }
 
 .activeIntro {

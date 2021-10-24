@@ -1,5 +1,5 @@
 body {
-    margin: 10px;
+    margin: 20px;
     font-weight: 600;
 }
 
@@ -18,24 +18,16 @@ footer {
     font-weight: 300;
 }
 
-.activeIntro {
-    /* display:none; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left:  50%;
-    /* look up what transform: transslate mean */
-    transform: translate(-50%, -50%);
-}
-.hide{
+.hide,
+.hideResults{
     display:none;
 }
 .hideQuestion {
     display: none;
 }
-.activeQuestion {
+.activeQuestion,
+.activeResults,
+.activeIntro {
     /* display:none; */
     display: flex;
     flex-direction: column;
@@ -49,20 +41,6 @@ footer {
 .answerList{
     display:flex;
     flex-direction: column;
-}
-.hideResults {
-    display: none;
-}
-.activeResults{
-    /* display:none; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left:  50%;
-    /* look up what transform: transslate mean */
-    transform: translate(-50%, -50%);
 }
 
 h1, h2 {
@@ -80,7 +58,10 @@ p {
     padding-bottom: 10px;
 }
 
-.start {
+
+.start,
+.btn3,
+.sumbitScore {
     font-weight: 500;
     color: #0d0dad;
     padding: 8px;
@@ -88,6 +69,8 @@ p {
     background-color: #d3e5f1;
 }
 
-.start:hover {
-    background-color: #47aad1;
+.start:hover,
+.btn:hover,
+.sumbitScore:hover {
+    background-color: #076185;
 }

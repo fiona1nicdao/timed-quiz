@@ -1,3 +1,4 @@
+
 main {
     display: flex;
     flex-direction: column;
@@ -6,17 +7,30 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
-
+#order {
+    background-color: #b6d7ee;
+    border: #b6d7ee 10px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
 .buttons {
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     position: absolute;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.back,
 .clear {
     margin: 20px;
+    font-weight: 500;
+    color: #0d0dad;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #d3e5f1;
 }
+

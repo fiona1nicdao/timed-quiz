@@ -24,4 +24,3 @@ function clearScores() {
 }
 clear.onclick = clearScores;
 displayScore();
-// window.location.href ="../index.html"

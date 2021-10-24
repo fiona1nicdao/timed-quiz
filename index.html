@@ -11,7 +11,6 @@
 </head>
 <body>
     <header>
-        <!-- add a new page with high scores! I did it! now i need to make the back button work  -->
         <a href="./score/indexS.html">View Highscores</a>
         <article class = 'timer'>timer</article>
     </header>
@@ -28,8 +27,8 @@
     <!-- Quiz questions  -->
     <section class='hideQuestion'> 
         <div class='questionText'>question</div>
-        <div class='answerList'id ='answerList'></div>
-        <footer class=feedback></footer>
+        <div class='answerList'></div>
+        <footer class=feedback class=feedback1></footer>
     </section>
 
     <!-- results page  -->
@@ -39,11 +38,8 @@
         <form>
             <label>Enter Initals</label>
             <input type="text" class='initals'>
-            <input type="submit" class=sumbitScore>
-            <button type="button" onclick="location.href='./score/indexS.html';">Highscore</button>
+            <button type="button" class=sumbitScore onclick="location.href='./score/indexS.html';">Submit</button>
         </form>
-        <!-- add text box and submit button  -->
-        <div class='enterInitals'> </div>
     </section>
 
     <script src="script.js"></script> 

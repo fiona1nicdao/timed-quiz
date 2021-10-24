@@ -1,8 +1,7 @@
 // variables
-var timeEl = document.querySelector(".timer");
-var mainEl = document.querySelector(".main");
-var secondsLeft = 100;
-var startquizButton = document.querySelector(".start");
+var timeEl = document.querySelector(".timer")
+var secondsLeft = 150;
+var startquizButton = document.querySelector(".start")
 var activeIntro = document.querySelector('.activeIntro')
 var activeQuestion = document.querySelectorAll(".activeQuestion")
 var hideQue = document.querySelector('.hideQuestion')
@@ -10,10 +9,10 @@ var hideRes = document.querySelector('.hideResults')
 var finalScoreEl = document.querySelector('.finalScore')
 var questionEl = document.querySelector('.questionText')
 var answersEl = document.querySelector('.answerList')
-// var btnA = document.getElementById("#btnA")
 var feedback = document.querySelector(".feedback")
 var initialsEl = document.querySelector('.initals')
 var submitScore = document.querySelector('.sumbitScore')
+
 
 // timer function
 startquizButton.addEventListener("click", setTime);
@@ -29,16 +28,16 @@ function setTime() {
         }
     },1000);
 }
-// function for out of time  
+// function Results/ GameOver 
 function sendResults() {
     hideQue.setAttribute('class','hideQuestion');
     hideRes.setAttribute('class','activeResults');
     finalScoreEl.innerHTML =("Your final score is " + secondsLeft +".");
 }
-// start game 
+// function/click to start game 
 startquizButton.addEventListener("click", startQuiz);
 function startQuiz() {
-    console.log('click');
+    console.log('check start');
     activeIntro.setAttribute('class','hide');
     hideQue.setAttribute('class','activeQuestion');
     showQuestion()
@@ -46,7 +45,7 @@ function startQuiz() {
 // show each question and answers 
 var x = 0
 function showQuestion() {
-    console.log("hello");
+    console.log("check question");
     var currentQuestion = questions[x];
     questionEl.textContent = currentQuestion.question;
 
@@ -55,18 +54,14 @@ function showQuestion() {
         var btn3 = document.createElement('button');
         btn3.setAttribute('class','btn3');
         btn3.setAttribute('value', choice);
-        btn3.textContent = i +1 + "." + choice;
+        btn3.textContent = choice;
         btn3.onclick = chooseAnswer;
         answersEl.appendChild(btn3);
     });
-
-
 }
 // User choose right or wrong answer
-var btn2El = document.querySelectorAll('.btn2')
-
 function chooseAnswer() {
-    console.log("what up")
+    console.log("check answer")
     if (this.value !== questions[x].correctAnswer) {
         secondsLeft -= 10;
         if (secondsLeft <0) {
@@ -74,9 +69,12 @@ function chooseAnswer() {
         }
         timeEl.textContent = secondsLeft
         feedback.textContent = "wrong!";
+        feedback.style.color ="red";
     } else {
         feedback.textContent = "right!";
+        feedback.style.color ="green";
     }
+
     feedback.setAttribute('class', 'feedback1');
 
     x++
@@ -88,7 +86,8 @@ function chooseAnswer() {
         showQuestion()
     }
 }
-
+// function to store the scores 
+submitScore.addEventListener("click", storeScore);
 function storeScore() {
     var initial = initialsEl.value.trim();
 
@@ -101,15 +100,10 @@ function storeScore() {
         };
         highscores.push(newScore);
         window.localStorage.setItem("scores", JSON.stringify(highscores));
-        // fix how to go to the next page
-        window.location.replace("./score/indexS.html") 
+        window.location.href ="./score/indexS.html";
     }
 }
-
-submitScore.onclick =storeScore;
-
-
-// an array of questions with objects answers 
+// an array of questions, answers, and correct answer
 var questions = [
     {
         question:'What is the correct definition for JavaScript?',

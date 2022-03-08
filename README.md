@@ -8,7 +8,7 @@
 - able to save my initals and my score 
 
 ## Link
-link to [quiz](https://fiona1nicdao.github.io/Homework_04/)
+link to [quiz](https://fiona1nicdao.github.io/timed-quiz/)
 
 ## preview
 ![quizfront](./images/quiz.png)

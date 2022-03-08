@@ -1,4 +1,3 @@
-# Homework_04
 
 ## Time Quiz 
 ## Objectives 
@@ -13,3 +12,6 @@ link to [quiz](https://fiona1nicdao.github.io/Homework_04/)
 
 ## preview
 ![quizfront](./images/quiz.png)
+
+# Questions 
+Please contact me direclty via the github [fiona1nicdao](<https://github.com/fiona1nicdao>)
